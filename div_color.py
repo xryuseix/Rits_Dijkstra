@@ -2,9 +2,8 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 # 元の画像を読み込む
-org_img = cv2.imread("rgbsample.png", cv2.IMREAD_COLOR)
+org_img = cv2.imread("./Pictures/plot.png", cv2.IMREAD_COLOR)
 
 # ゼロ埋めの画像配列
 if len(org_img.shape) == 3:
