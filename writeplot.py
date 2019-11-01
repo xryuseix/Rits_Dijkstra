@@ -9,7 +9,7 @@ img = cv2.imread("./Pictures/plot.png", 1)
 height = img.shape[0]
 width = img.shape[1]
 
-with open('./pixel.txt') as f:
+with open('./pixel.csv') as f:
     reader = csv.reader(f)
     grid = [row for row in reader]
 

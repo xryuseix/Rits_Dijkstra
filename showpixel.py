@@ -37,7 +37,7 @@ for y in range(0,int(h)):
         else:
             continue
 
-with open('./pixel.txt', 'w') as f:
+with open('./pixel.csv', 'w') as f:
     writer = csv.writer(f)
     writer.writerow(redX)
     writer.writerow(redY)
