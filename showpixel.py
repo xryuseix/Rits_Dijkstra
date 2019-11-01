@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+import csv
 
 # 赤色判定
 def isred(x,y,z):
@@ -30,8 +31,13 @@ for y in range(0,int(h)):
     for x in range(0,int(w)):
         pixelValue = org_img[y, x]
         if isred(pixelValue[0], pixelValue[1], pixelValue[2]):
-            print('(' + str(x) + ', ' + str(y) + ') ' + 'pixelValue = ' + str(pixelValue))
+            # print('(' + str(x) + ', ' + str(y) + ') ' + 'pixelValue = ' + str(pixelValue))
             redX.append(x)
             redY.append(y)
         else:
             continue
+
+with open('./pixel.txt', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerow(redX)
+    writer.writerow(redY)
