@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
+# 赤色判定
 def isred(x,y,z):
     x += 1
     y += 1
@@ -18,8 +19,10 @@ def isred(x,y,z):
 # 元の画像を読み込む
 org_img = cv2.imread("./Pictures/plot.png", cv2.IMREAD_COLOR)
 
+# 画像の高さと幅
 h, w, _ = org_img.shape
 
+# 赤色の画像の座標
 redX = []
 redY = []
 
