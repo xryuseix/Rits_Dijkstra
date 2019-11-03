@@ -1,6 +1,9 @@
 import cv2
 import matplotlib.pyplot as plt
 
+print("現在地，行き先の順に入力：")
+From, To = map(int, input().split())
+
 # 入力された値を格納するだけの配列
 input = [[]]
 
@@ -33,23 +36,20 @@ input.pop(0)
 # 頂点数
 V = input[-1][0] + 1
 
+# 経路を追加
 path = [[[] for i in range(V)] for j in range(V)]
-
 for i in input:
     path[i[0]][i[-1]].append(i)
-
-
-From = 0
-To = 6
-
-print(len(path[From][To][0]))
 
 # 画像の読み込み
 img = cv2.imread("./Pictures/plot.png", 1)
 
-# 矢印の描画
+# 矢印の描画([From][To][0]の最後の0は謎)
 for i in range(0, len(path[From][To][0]) - 1):
     cv2.arrowedLine(img, (vx[path[From][To][0][i]], vy[path[From][To][0][i]]), (vx[path[From][To][0][i + 1]], vy[path[From][To][0][i + 1]]), (0, 255, 0), thickness=3)
+# 頂点番号の描画
+for i in range(0,V):
+    cv2.putText(img, str(i), (int(vx[i]), int(vy[i])), cv2.FONT_HERSHEY_COMPLEX, 0.7, (255, 0, 0), thickness=2)
 
 
 # 画像の表示
