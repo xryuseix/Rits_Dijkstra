@@ -149,7 +149,5 @@ int main(void){
     }
     wa.warshall_floyd();
     wa.show();
-
-
-
+    cout<<E.size()<<endl;
 }
