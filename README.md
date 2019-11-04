@@ -28,16 +28,24 @@
 
 ### div_color.py
 
+最初は色を抽出しようとしたけどうまくいかなかったのでこのファイルは要らない．
+
 ### showpixel.py
+
+画素の赤色判定を行い，赤色の画素を出力するプログラム
 
 ### writeplot.py
 
+ちゃんと画素が取れているかの確認と頂点番号がわかるプログラム．計算量は$O(V*max(V+E)logV,V^2))$になっている．
+
 ### zip.cpp
 
-### pixel.csv
+幅優先探索を用いて連続している画素を一つの集合に入れ，その中の中央の画素の座標を出力するプログラム
 
-### Pictures/plot.JPG
+### interface.py
 
-### Pictures/rgbsample.png
+[path.csv](./path.csv)を読み込み，入力された頂点番号に対してグラフを描画するプログラム
 
-### Pictures/plot.png
+### dijkstra.cpp
+
+[zip.csv](./zip.csv)を読み込み，ダイクストラ法を用いて経路復元を全頂点に対して行うプログラム
