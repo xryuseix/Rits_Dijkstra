@@ -34,7 +34,8 @@
 
 ### writeplot.py
 
-ちゃんと画素が取れているかの確認と頂点番号がわかるプログラム．計算量は$$O(V*(V+E)logV)$$になっている．
+ちゃんと画素が取れているかの確認と頂点番号がわかるプログラム．計算量は<img src="https://latex.codecogs.com/gif.latex?O(V*(V+E)logV)" />になっている．
+
 
 ### zip.cpp
 
