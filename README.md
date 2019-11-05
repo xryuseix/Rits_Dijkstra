@@ -23,7 +23,7 @@
 
 1. 赤く点を塗った写真をPictureフォルダ内に「plot.png」という名前で入れてください
 2. [edge.csv](./edge.csv)に道路(辺)を記入してください．辺は「どこから，どこまで」を２行で書き，次の辺はカンマ区切りでその隣に書いてください．また，「どこから，どこまで」を書くと逆側の辺も自動で貼られます
-3. [dijkstra.cpp](./dijkstra.cpp)を実行してください
+3. [showpixel.py](./showpixel.py),[dijkstra.cpp](./dijkstra.cpp)を実行してください
 4. [interface.py](./interface.py)を実行し，計算させたい経路の頂点番号を記入してください．頂点番号は[interface.py](./interface.py)または[writeplot.py](./writeplot.py)で確認できます．
 
 ## ファイルの説明
@@ -34,12 +34,11 @@
 
 ### writeplot.py
 
-ちゃんと画素が取れているかの確認と頂点番号がわかるプログラム．計算量は<img src="https://latex.codecogs.com/gif.latex?O(V*(V+E)logV)" />になっている．
-
+ちゃんと画素が取れているかの確認と頂点番号がわかるプログラム．
 
 ### zip.cpp
 
-幅優先探索を用いて連続している画素を一つの集合に入れ，その中の中央の画素の座標を出力するプログラム．
+幅優先探索を用いて連続している画素を一つの集合に入れ，その中の中央の画素の座標を出力するプログラム．計算量は<img src="https://latex.codecogs.com/gif.latex?O(N^2))" />になっている．
 
 ### interface.py
 
@@ -47,4 +46,4 @@
 
 ### dijkstra.cpp
 
-[zip.csv](./zip.csv)を読み込み，ダイクストラ法を用いて経路復元を全頂点に対して行うプログラム．
+[zip.csv](./zip.csv)を読み込み，ダイクストラ法を用いて経路復元を全頂点に対して行うプログラム．計算量は<img src="https://latex.codecogs.com/gif.latex?O(V*(V+E)logV)" />になっている．
